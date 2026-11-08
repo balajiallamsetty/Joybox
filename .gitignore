@@ -1,0 +1,83 @@
+# Environments and secrets
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+
+# Python virtual environments & bytecode
+venv/
+.venv/
+backend/.venv/
+env/
+__pycache__/
+**/*.py[cod]
+*$py.class
+*.pytest_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage/
+frontend/coverage/
+htmlcov/
+
+# Node dependencies and build artifacts
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+.npm/
+.vite/
+**/.vite/
+
+# Logs and debug files
+*.log
+**/*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backups and local scratch. Delivery dumps belong at C:\backups\joybox-YYYY-MM-DD
+# and must never be copied into this repo.
+backups/
+joybox-*/
+C:/backups/
+*.bak
+*.swp
+*.swo
+# Operating system & Editor files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Test and coverage artifacts
+test-results/
+frontend/test-results/
+playwright-report/
+frontend/playwright-report/
+.coverage
+.coverage.*
+coverage/
+frontend/coverage/
+htmlcov/
+Reports/mobile-audit/
+Reports/docs/visual_audit/
+Reports/docs/delivery-screenshots/
+Reports/docs/responsive-review/screenshots/
+Reports/docs/contrast-audit/before/
+Reports/docs/contrast-audit/after/
+Reports/docs/evidence/

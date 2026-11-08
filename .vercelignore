@@ -1,0 +1,13 @@
+.git
+.github
+.githooks
+backend
+Reports
+**/Reports
+node_modules
+dist
+test-results
+playwright-report
+*.log
+.env
+.env.*

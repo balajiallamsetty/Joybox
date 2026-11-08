@@ -1,0 +1,10 @@
+#!/bin/sh
+# Joybox Pre-Commit Hook: Secret Scan
+echo "[pre-commit] Scanning working tree for secrets..."
+python backend/scripts/scan_secrets.py
+EXIT_CODE=$?
+if [ $EXIT_CODE -ne 0 ]; then
+    echo "[pre-commit] ERROR: Secret scan failed. Commit aborted."
+    exit 1
+fi
+exit 0

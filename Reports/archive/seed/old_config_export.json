@@ -1,0 +1,282 @@
+{
+  "sourceDatabase": "joybox_party_room",
+  "note": "Config only. Not imported automatically. Customers, bookings, payments, sessions, logs, and users are excluded.",
+  "timeSlotRules": {
+    "openingHourIst": 9,
+    "closingHourIst": 22,
+    "bufferMinutes": 30,
+    "slotAlignment": "top of the hour",
+    "source": "backend/app/config.py constants; no settings collection exists"
+  },
+  "packages": [
+    {
+      "code": "basic",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:08.956Z"
+      },
+      "currency": "INR",
+      "displayOrder": 1,
+      "excludes": [
+        "Fresh Celebration Cake",
+        "Customized Name Display",
+        "Special FX (Fog, Bubbles, Spark Guns)"
+      ],
+      "features": [
+        "Entire Air-Conditioned Private Hall",
+        "Curated Birthday / Occasion Theme Decor",
+        "High-output Sound System & Party Music",
+        "Vibrant Ambient Hall Lighting"
+      ],
+      "featuresTe": [
+        "\u0c2a\u0c42\u0c30\u0c4d\u0c24\u0c3f \u0c2a\u0c4d\u0c30\u0c48\u0c35\u0c47\u0c1f\u0c4d \u0c0f\u0c38\u0c40 \u0c39\u0c3e\u0c32\u0c4d",
+        "\u0c2c\u0c30\u0c4d\u0c24\u0c4d\u200c\u0c21\u0c47 / \u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15 \u0c38\u0c02\u0c26\u0c30\u0c4d\u0c2d\u0c02 \u0c25\u0c40\u0c2e\u0c4d \u0c21\u0c46\u0c15\u0c30\u0c47\u0c37\u0c28\u0c4d",
+        "\u0c39\u0c48-\u0c15\u0c4d\u0c35\u0c3e\u0c32\u0c3f\u0c1f\u0c40 \u0c38\u0c4c\u0c02\u0c21\u0c4d \u0c38\u0c3f\u0c38\u0c4d\u0c1f\u0c2e\u0c4d & \u0c2e\u0c4d\u0c2f\u0c42\u0c1c\u0c3f\u0c15\u0c4d",
+        "\u0c32\u0c48\u0c1f\u0c3f\u0c02\u0c17\u0c4d & \u0c2a\u0c3e\u0c30\u0c4d\u0c1f\u0c40 \u0c05\u0c02\u0c2c\u0c3f\u0c2f\u0c28\u0c4d\u0c38\u0c4d"
+      ],
+      "includedAddOnCodes": [],
+      "isActive": true,
+      "isFeatured": false,
+      "name": "Basic",
+      "nameTe": "\u0c2c\u0c47\u0c38\u0c3f\u0c15\u0c4d",
+      "pricePerHourMinor": 99900,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:25.186Z"
+      }
+    },
+    {
+      "code": "gold",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:28.871Z"
+      },
+      "currency": "INR",
+      "displayOrder": 2,
+      "excludes": [
+        "Bubble & Fog Special Effects"
+      ],
+      "features": [
+        "Everything in Basic Package",
+        "Fresh 0.5 kg Birthday / Celebration Cake",
+        "Personalized Acrylic / Neon Name Display",
+        "Easel Stand Custom Welcome Chalkboard",
+        "Dedicated Table for Guest Treats & Gifts"
+      ],
+      "featuresTe": [
+        "\u0c2c\u0c47\u0c38\u0c3f\u0c15\u0c4d \u0c2a\u0c4d\u0c2f\u0c3e\u0c15\u0c47\u0c1c\u0c40\u0c32\u0c4b\u0c28\u0c3f \u0c2a\u0c4d\u0c30\u0c24\u0c3f \u0c2b\u0c40\u0c1a\u0c30\u0c4d",
+        "\u0c24\u0c3e\u0c1c\u0c3e 0.5 \u0c15\u0c47\u0c1c\u0c40 \u0c2c\u0c30\u0c4d\u0c24\u0c4d\u200c\u0c21\u0c47 \u0c15\u0c47\u0c15\u0c4d",
+        "\u0c15\u0c38\u0c4d\u0c1f\u0c2e\u0c48\u0c1c\u0c4d\u0c21\u0c4d \u0c2a\u0c47\u0c30\u0c41 \u0c32\u0c46\u0c1f\u0c30\u0c4d\u0c38\u0c4d \u0c21\u0c3f\u0c38\u0c4d\u0c2a\u0c4d\u0c32\u0c47",
+        "\u0c35\u0c46\u0c32\u0c4d\u0c15\u0c2e\u0c4d \u0c2c\u0c4b\u0c30\u0c4d\u0c21\u0c41",
+        "\u0c17\u0c3f\u0c2b\u0c4d\u0c1f\u0c4d\u0c38\u0c4d & \u0c1f\u0c4d\u0c30\u0c40\u0c1f\u0c4d\u0c38\u0c4d \u0c1f\u0c47\u0c2c\u0c41\u0c32\u0c4d \u0c05\u0c30\u0c47\u0c02\u0c1c\u0c4d\u200c\u0c2e\u0c46\u0c02\u0c1f\u0c4d"
+      ],
+      "includedAddOnCodes": [],
+      "isActive": true,
+      "isFeatured": true,
+      "name": "Gold",
+      "nameTe": "\u0c17\u0c4b\u0c32\u0c4d\u0c21\u0c4d",
+      "pricePerHourMinor": 150000,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:25.186Z"
+      }
+    },
+    {
+      "code": "diamond",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:28.871Z"
+      },
+      "currency": "INR",
+      "displayOrder": 3,
+      "excludes": [],
+      "features": [
+        "Everything in Gold Package",
+        "Magical High-Density Bubble Machine Entry",
+        "Cinematic Low-Lying Fog Cloud Entry",
+        "1 Indoor Cold-Fire Spark Gun Blast",
+        "Assisted Lighting for 4K Video Captures"
+      ],
+      "featuresTe": [
+        "\u0c17\u0c4b\u0c32\u0c4d\u0c21\u0c4d \u0c2a\u0c4d\u0c2f\u0c3e\u0c15\u0c47\u0c1c\u0c40\u0c32\u0c4b\u0c28\u0c3f \u0c2a\u0c4d\u0c30\u0c24\u0c3f \u0c2b\u0c40\u0c1a\u0c30\u0c4d",
+        "\u0c2c\u0c41\u0c21\u0c17\u0c32 \u0c2e\u0c46\u0c37\u0c3f\u0c28\u0c4d \u0c0e\u0c02\u0c1f\u0c4d\u0c30\u0c40",
+        "\u0c38\u0c3f\u0c28\u0c3f\u0c2e\u0c3e\u0c1f\u0c3f\u0c15\u0c4d \u0c2b\u0c3e\u0c17\u0c4d \u0c15\u0c4d\u0c32\u0c4c\u0c21\u0c4d \u0c0e\u0c02\u0c1f\u0c4d\u0c30\u0c40",
+        "1 \u0c15\u0c4b\u0c32\u0c4d\u0c21\u0c4d-\u0c2b\u0c48\u0c30\u0c4d \u0c38\u0c4d\u0c2a\u0c3e\u0c30\u0c4d\u0c15\u0c4d \u0c17\u0c28\u0c4d \u0c37\u0c3e\u0c1f\u0c4d",
+        "\u0c35\u0c40\u0c21\u0c3f\u0c2f\u0c4b \u0c15\u0c35\u0c30\u0c47\u0c1c\u0c4d \u0c15\u0c4b\u0c38\u0c02 \u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15 \u0c32\u0c48\u0c1f\u0c3f\u0c02\u0c17\u0c4d"
+      ],
+      "includedAddOnCodes": [
+        "bubble_entry",
+        "fog_entry",
+        "cold_fire_one_shot"
+      ],
+      "isActive": true,
+      "isFeatured": false,
+      "name": "Diamond",
+      "nameTe": "\u0c21\u0c48\u0c2e\u0c02\u0c21\u0c4d",
+      "pricePerHourMinor": 250000,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:25.186Z"
+      }
+    }
+  ],
+  "addOns": [
+    {
+      "code": "bubble_entry",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:12.008Z"
+      },
+      "currency": "INR",
+      "description": "Magical floating bubbles for cake cutting entry",
+      "descriptionTe": "\u0c15\u0c47\u0c15\u0c4d \u0c15\u0c1f\u0c4d\u0c1f\u0c3f\u0c02\u0c17\u0c4d \u0c38\u0c2e\u0c2f\u0c02\u0c32\u0c4b \u0c05\u0c26\u0c4d\u0c2d\u0c41\u0c24\u0c2e\u0c48\u0c28 \u0c2c\u0c41\u0c21\u0c17\u0c32 \u0c0e\u0c02\u0c1f\u0c4d\u0c30\u0c40",
+      "displayOrder": 1,
+      "iconSymbol": "bubble_chart",
+      "isActive": true,
+      "name": "Bubble Machine Entry",
+      "nameTe": "\u0c2c\u0c41\u0c21\u0c17\u0c32 \u0c2e\u0c46\u0c37\u0c3f\u0c28\u0c4d \u0c0e\u0c02\u0c1f\u0c4d\u0c30\u0c40",
+      "priceMinor": 30000,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:25.666Z"
+      }
+    },
+    {
+      "code": "fog_entry",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:30.754Z"
+      },
+      "currency": "INR",
+      "description": "Dense floor mist for grand royal entry vibes",
+      "descriptionTe": "\u0c30\u0c3e\u0c2f\u0c32\u0c4d \u0c0e\u0c02\u0c1f\u0c4d\u0c30\u0c40 \u0c05\u0c28\u0c41\u0c2d\u0c42\u0c24\u0c3f\u0c28\u0c3f\u0c1a\u0c4d\u0c1a\u0c47 \u0c26\u0c1f\u0c4d\u0c1f\u0c2e\u0c48\u0c28 \u0c28\u0c47\u0c32 \u0c2a\u0c4a\u0c17 \u0c0e\u0c2b\u0c46\u0c15\u0c4d\u0c1f\u0c4d",
+      "displayOrder": 2,
+      "iconSymbol": "cloud",
+      "isActive": true,
+      "name": "Low-Lying Fog Cloud",
+      "nameTe": "\u0c32\u0c4b-\u0c32\u0c48\u0c2f\u0c3f\u0c02\u0c17\u0c4d \u0c2b\u0c3e\u0c17\u0c4d \u0c0e\u0c02\u0c1f\u0c4d\u0c30\u0c40",
+      "priceMinor": 50000,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:25.666Z"
+      }
+    },
+    {
+      "code": "cold_fire_one_shot",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:30.754Z"
+      },
+      "currency": "INR",
+      "description": "Safe indoor pyrotechnic spark blast",
+      "descriptionTe": "\u0c07\u0c02\u0c21\u0c4b\u0c30\u0c4d \u0c2a\u0c3e\u0c30\u0c4d\u0c1f\u0c40\u0c32\u0c15\u0c41 \u0c38\u0c41\u0c30\u0c15\u0c4d\u0c37\u0c3f\u0c24\u0c2e\u0c48\u0c28 \u0c38\u0c4d\u0c2a\u0c3e\u0c30\u0c4d\u0c15\u0c4d \u0c17\u0c28\u0c4d \u0c2a\u0c47\u0c32\u0c41\u0c21\u0c41",
+      "displayOrder": 3,
+      "iconSymbol": "flare",
+      "isActive": true,
+      "name": "Cold-Fire Spark Gun (1 shot)",
+      "nameTe": "\u0c15\u0c4b\u0c32\u0c4d\u0c21\u0c4d-\u0c2b\u0c48\u0c30\u0c4d \u0c38\u0c4d\u0c2a\u0c3e\u0c30\u0c4d\u0c15\u0c4d \u0c17\u0c28\u0c4d (1 \u0c37\u0c3e\u0c1f\u0c4d)",
+      "priceMinor": 30000,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:25.666Z"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "eligiblePackageCode": "basic",
+      "createdAt": {
+        "$date": "2026-10-28T17:49:14.396Z"
+      },
+      "currentPeriodKey": "2026-10",
+      "description": "Basic Package at \u20b9500/hour for the first 5 eligible bookings each month",
+      "descriptionTe": "\u0c2a\u0c4d\u0c30\u0c24\u0c3f \u0c28\u0c46\u0c32 \u0c2e\u0c4a\u0c26\u0c1f\u0c3f 5 \u0c2c\u0c41\u0c15\u0c3f\u0c02\u0c17\u0c4d\u200c\u0c32\u0c15\u0c41 \u0c2c\u0c47\u0c38\u0c3f\u0c15\u0c4d \u0c2a\u0c4d\u0c2f\u0c3e\u0c15\u0c47\u0c1c\u0c40 \u0c15\u0c47\u0c35\u0c32\u0c02 \u20b9500/\u0c17\u0c02\u0c1f\u0c15\u0c47",
+      "isActive": true,
+      "monthlyLimit": 5,
+      "monthlyRedemptionCount": 5,
+      "name": "Introductory Monthly Celebration Offer",
+      "nameTe": "\u0c28\u0c46\u0c32\u0c35\u0c3e\u0c30\u0c40 \u0c2a\u0c4d\u0c30\u0c3e\u0c30\u0c02\u0c2d \u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15 \u0c06\u0c2b\u0c30\u0c4d",
+      "promoPricePerHourMinor": 50000,
+      "schemaVersion": 1,
+      "updatedAt": {
+        "$date": "2026-10-28T19:37:26.063Z"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "code": "advance_booking_time",
+      "answer": "We recommend booking at least 2\u20133 days in advance for weekends and popular evening slots (6:00 PM \u2013 10:00 PM). Same-day bookings are accepted subject to instant slot availability.",
+      "answerTe": "\u0c35\u0c3e\u0c30\u0c3e\u0c02\u0c24\u0c3e\u0c32\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c38\u0c3e\u0c2f\u0c02\u0c24\u0c4d\u0c30\u0c02 \u0c38\u0c4d\u0c32\u0c3e\u0c1f\u0c4d\u0c32 \u0c15\u0c4b\u0c38\u0c02 \u0c15\u0c28\u0c40\u0c38\u0c02 2-3 \u0c30\u0c4b\u0c1c\u0c41\u0c32 \u0c2e\u0c41\u0c02\u0c26\u0c41 \u0c2c\u0c41\u0c15\u0c4d \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c28\u0c3f \u0c38\u0c3f\u0c2b\u0c3e\u0c30\u0c4d\u0c38\u0c41 \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c41\u0c28\u0c4d\u0c28\u0c3e\u0c2e\u0c41.",
+      "category": "booking",
+      "createdAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      },
+      "displayOrder": 1,
+      "isActive": true,
+      "question": "How far in advance should I book my celebration?",
+      "questionTe": "\u0c35\u0c47\u0c21\u0c41\u0c15 \u0c15\u0c4b\u0c38\u0c02 \u0c0e\u0c28\u0c4d\u0c28\u0c3f \u0c30\u0c4b\u0c1c\u0c41\u0c32 \u0c2e\u0c41\u0c02\u0c26\u0c41 \u0c2c\u0c41\u0c15\u0c4d \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c35\u0c3e\u0c32\u0c3f?",
+      "updatedAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      }
+    },
+    {
+      "code": "outside_food_policy",
+      "answer": "Yes! Outside food, snacks, cold beverages, and celebration cakes are 100% permitted. We provide dedicated serving tables and a clean eating area.",
+      "answerTe": "\u0c05\u0c35\u0c41\u0c28\u0c41! \u0c2c\u0c2f\u0c1f\u0c3f \u0c2b\u0c41\u0c21\u0c4d, \u0c38\u0c4d\u0c28\u0c3e\u0c15\u0c4d\u0c38\u0c4d, \u0c15\u0c42\u0c32\u0c4d \u0c21\u0c4d\u0c30\u0c3f\u0c02\u0c15\u0c4d\u0c38\u0c4d \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c15\u0c47\u0c15\u0c4d \u0c24\u0c40\u0c38\u0c41\u0c15\u0c41\u0c30\u0c3e\u0c35\u0c21\u0c3e\u0c28\u0c3f\u0c15\u0c3f \u0c2a\u0c42\u0c30\u0c4d\u0c24\u0c3f \u0c05\u0c28\u0c41\u0c2e\u0c24\u0c3f \u0c09\u0c02\u0c26\u0c3f.",
+      "category": "food",
+      "createdAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      },
+      "displayOrder": 2,
+      "isActive": true,
+      "question": "Can we bring outside food, snacks, and cake?",
+      "questionTe": "\u0c2c\u0c2f\u0c1f\u0c3f \u0c06\u0c39\u0c3e\u0c30\u0c02, \u0c38\u0c4d\u0c28\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c15\u0c47\u0c15\u0c4d \u0c24\u0c40\u0c38\u0c41\u0c15\u0c41\u0c30\u0c3e\u0c35\u0c1a\u0c4d\u0c1a\u0c3e?",
+      "updatedAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      }
+    },
+    {
+      "code": "guest_capacity",
+      "answer": "Joybox Party Room comfortably accommodates up to 25\u201330 guests for intimate birthdays, college reunions, family celebrations, and screening parties.",
+      "answerTe": "\u0c2c\u0c30\u0c4d\u0c24\u0c4d\u200c\u0c21\u0c47\u0c32\u0c41, \u0c30\u0c40\u0c2f\u0c42\u0c28\u0c3f\u0c2f\u0c28\u0c4d\u0c32\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c2b\u0c4d\u0c2f\u0c3e\u0c2e\u0c3f\u0c32\u0c40 \u0c35\u0c47\u0c21\u0c41\u0c15\u0c32 \u0c15\u0c4b\u0c38\u0c02 25-30 \u0c2e\u0c02\u0c26\u0c3f \u0c05\u0c24\u0c3f\u0c25\u0c41\u0c32\u0c41 \u0c38\u0c4c\u0c15\u0c30\u0c4d\u0c2f\u0c35\u0c02\u0c24\u0c02\u0c17\u0c3e \u0c09\u0c02\u0c21\u0c35\u0c1a\u0c4d\u0c1a\u0c41.",
+      "category": "venue",
+      "createdAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      },
+      "displayOrder": 3,
+      "isActive": true,
+      "question": "What is the maximum guest capacity of Joybox?",
+      "questionTe": "\u0c1c\u0c3e\u0c2f\u0c4d\u200c\u0c2c\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c17\u0c30\u0c3f\u0c37\u0c4d\u0c1f \u0c05\u0c24\u0c3f\u0c25\u0c41\u0c32 \u0c38\u0c3e\u0c2e\u0c30\u0c4d\u0c25\u0c4d\u0c2f\u0c02 \u0c0e\u0c02\u0c24?",
+      "updatedAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      }
+    },
+    {
+      "code": "music_and_dj_control",
+      "answer": "Yes! You have full wireless Bluetooth access to our high-output club sound system and party laser lighting directly from your smartphone.",
+      "answerTe": "\u0c16\u0c1a\u0c4d\u0c1a\u0c3f\u0c24\u0c02\u0c17\u0c3e! \u0c2e\u0c40 \u0c2e\u0c4a\u0c2c\u0c48\u0c32\u0c4d \u0c28\u0c41\u0c02\u0c21\u0c3f \u0c2c\u0c4d\u0c32\u0c42\u0c1f\u0c42\u0c24\u0c4d \u0c26\u0c4d\u0c35\u0c3e\u0c30\u0c3e \u0c39\u0c48-\u0c15\u0c4d\u0c35\u0c3e\u0c32\u0c3f\u0c1f\u0c40 \u0c38\u0c4c\u0c02\u0c21\u0c4d \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c32\u0c48\u0c1f\u0c3f\u0c02\u0c17\u0c4d \u0c2e\u0c40\u0c30\u0c47 \u0c15\u0c02\u0c1f\u0c4d\u0c30\u0c4b\u0c32\u0c4d \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41.",
+      "category": "amenities",
+      "createdAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      },
+      "displayOrder": 4,
+      "isActive": true,
+      "question": "Can we play our own music and DJ playlist?",
+      "questionTe": "\u0c2e\u0c3e \u0c38\u0c4d\u0c35\u0c02\u0c24 \u0c2a\u0c3e\u0c1f\u0c32\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c21\u0c40\u0c1c\u0c47 \u0c2a\u0c4d\u0c32\u0c47\u0c32\u0c3f\u0c38\u0c4d\u0c1f\u0c4d \u0c2a\u0c4d\u0c32\u0c47 \u0c1a\u0c47\u0c38\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c3e?",
+      "updatedAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      }
+    },
+    {
+      "code": "cancellation_policy",
+      "answer": "Cancellations made more than 48 hours prior to start time receive a 100% full refund. Cancellations between 24 and 48 hours receive a 50% refund. Within 24 hours of start time, advance payments are non-refundable.",
+      "answerTe": "48 \u0c17\u0c02\u0c1f\u0c32 \u0c2e\u0c41\u0c02\u0c26\u0c41 \u0c30\u0c26\u0c4d\u0c26\u0c41 \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 100% \u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d, 24 \u0c28\u0c41\u0c02\u0c21\u0c3f 48 \u0c17\u0c02\u0c1f\u0c32 \u0c2e\u0c27\u0c4d\u0c2f \u0c30\u0c26\u0c4d\u0c26\u0c41 \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 50% \u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d \u0c32\u0c2d\u0c3f\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f.",
+      "category": "policy",
+      "createdAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      },
+      "displayOrder": 5,
+      "isActive": true,
+      "question": "What is the cancellation and refund policy?",
+      "questionTe": "\u0c30\u0c26\u0c4d\u0c26\u0c41 \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d \u0c28\u0c3f\u0c2c\u0c02\u0c27\u0c28\u0c32\u0c41 \u0c0f\u0c2e\u0c3f\u0c1f\u0c3f?",
+      "updatedAt": {
+        "$date": "2026-10-28T19:51:16.965Z"
+      }
+    }
+  ]
+}

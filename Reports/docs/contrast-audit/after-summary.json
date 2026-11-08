@@ -1,0 +1,10 @@
+{
+  "phase": "after",
+  "pairsChecked": 5087,
+  "failures": 0,
+  "passes": 5087,
+  "worst": [],
+  "axeFailures": 0,
+  "axeSample": [],
+  "failureSample": []
+}

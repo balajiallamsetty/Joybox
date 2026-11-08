@@ -1,0 +1,5 @@
+1.97 #d266a4 on #b40068 text /booking validation Next: Celebrant Details :: 
+1.97 #d266a4 on #b40068 text /booking validation arrow_forward :: material-symbols-outlined text-lg
+2.49 #a49ea8 on #fef7ff text /mobile-booking validation Sun :: font-label-sm text-label-sm text-on-surface-variant
+2.49 #a49ea8 on #fef7ff text /mobile-booking validation 26 :: font-headline-md text-lg font-bold text-on-surface-variant leading-none
+2.50 #dc898d on #fef7ff text /mobile-booking validation Sold Out :: font-label-sm text-[10px] text-error font-bold tracking-tight

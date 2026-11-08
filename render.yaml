@@ -1,0 +1,54 @@
+services:
+  # Joybox Backend Web Service (Flask on Render)
+  - type: web
+    name: joybox-backend
+    env: python
+    region: oregon
+    plan: starter # Recommended: starter tier to avoid sleep/cold-start latency on webhooks
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend --workers 3 --threads 2 --timeout 120 --bind 0.0.0.0:$PORT "app:create_app()"
+    healthCheckPath: /api/health
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: joybox_party_room
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: ADMIN_COOKIE_SAMESITE
+        value: Lax
+      - key: ADMIN_COOKIE_SECURE
+        value: "true"
+      - key: TRUSTED_PROXY_COUNT
+        value: "2"
+
+  # Background Sweep Cron Job (reclaims expired holds, restores promo quotas, reconciles payments)
+  - type: cron
+    name: joybox-maintenance-sweeps
+    env: python
+    region: oregon
+    schedule: "*/10 * * * *" # Every 10 minutes
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m app.jobs.run_sweeps
+    envVars:
+      - key: PYTHONPATH
+        value: "backend:."
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: joybox_party_room
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+

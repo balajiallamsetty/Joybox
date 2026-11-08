@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joybox Party Room — Responsive & Visual QA Contact Sheet</title>
+  <style>
+    :root {
+      --bg: #0d0a1a;
+      --card-bg: #18132b;
+      --border: #2e264d;
+      --text: #f0edf9;
+      --text-muted: #a39bc0;
+      --primary: #8d45ff;
+      --secondary: #e6108d;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      line-height: 1.5;
+    }
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff; }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-right: 0.5rem;
+    }
+    .badge-pass { background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid var(--success); }
+    .stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .page-section {
+      margin-bottom: 3rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    .page-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      display: flex;
+      flex-col: column;
+    }
+    .card-meta {
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+    }
+    .card-meta strong { color: var(--text); }
+    .thumb-wrap {
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .thumb-wrap img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease;
+    }
+    .thumb-wrap img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Joybox Party Room — Responsive Contact Sheet</h1>
+    <p style="color: var(--text-muted); font-size: 0.95rem;">
+      Audit across 14 device viewports (Mobile, Tablet, Desktop) in English and Telugu.
+    </p>
+    <div class="stats">
+      <span><span class="badge badge-pass">PASS</span> Overflow Check: 252/252 passed</span>
+      <span>Screenshots: 72 captured</span>
+      <span>Timestamp: 2026-11-07T19:05:47.288Z</span>
+    </div>
+  </header>
+
+  <main>
+    
+      <section class="page-section">
+        <h2 class="page-title">Home Landing (<code>/</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_en_390x844.png" target="_blank">
+                  <img src="./screenshots/home_en_390x844.png" alt="Home Landing 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/home_en_768x1024.png" alt="Home Landing 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/home_en_1280x720.png" alt="Home Landing 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/home_en_1920x1080.png" alt="Home Landing 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_te_390x844.png" target="_blank">
+                  <img src="./screenshots/home_te_390x844.png" alt="Home Landing 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/home_te_768x1024.png" alt="Home Landing 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/home_te_1280x720.png" alt="Home Landing 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/home_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/home_te_1920x1080.png" alt="Home Landing 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Packages & Rates (<code>/packages</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_en_390x844.png" target="_blank">
+                  <img src="./screenshots/packages_en_390x844.png" alt="Packages & Rates 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/packages_en_768x1024.png" alt="Packages & Rates 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/packages_en_1280x720.png" alt="Packages & Rates 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/packages_en_1920x1080.png" alt="Packages & Rates 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_te_390x844.png" target="_blank">
+                  <img src="./screenshots/packages_te_390x844.png" alt="Packages & Rates 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/packages_te_768x1024.png" alt="Packages & Rates 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/packages_te_1280x720.png" alt="Packages & Rates 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/packages_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/packages_te_1920x1080.png" alt="Packages & Rates 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Add-ons Showcase (<code>/add-ons</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_en_390x844.png" target="_blank">
+                  <img src="./screenshots/add-ons_en_390x844.png" alt="Add-ons Showcase 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/add-ons_en_768x1024.png" alt="Add-ons Showcase 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/add-ons_en_1280x720.png" alt="Add-ons Showcase 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/add-ons_en_1920x1080.png" alt="Add-ons Showcase 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_te_390x844.png" target="_blank">
+                  <img src="./screenshots/add-ons_te_390x844.png" alt="Add-ons Showcase 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/add-ons_te_768x1024.png" alt="Add-ons Showcase 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/add-ons_te_1280x720.png" alt="Add-ons Showcase 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/add-ons_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/add-ons_te_1920x1080.png" alt="Add-ons Showcase 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Booking Engine (<code>/booking</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_en_390x844.png" target="_blank">
+                  <img src="./screenshots/booking_en_390x844.png" alt="Booking Engine 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/booking_en_768x1024.png" alt="Booking Engine 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/booking_en_1280x720.png" alt="Booking Engine 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/booking_en_1920x1080.png" alt="Booking Engine 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_te_390x844.png" target="_blank">
+                  <img src="./screenshots/booking_te_390x844.png" alt="Booking Engine 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/booking_te_768x1024.png" alt="Booking Engine 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/booking_te_1280x720.png" alt="Booking Engine 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/booking_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/booking_te_1920x1080.png" alt="Booking Engine 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Photo Gallery (<code>/gallery</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_en_390x844.png" target="_blank">
+                  <img src="./screenshots/gallery_en_390x844.png" alt="Photo Gallery 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/gallery_en_768x1024.png" alt="Photo Gallery 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/gallery_en_1280x720.png" alt="Photo Gallery 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/gallery_en_1920x1080.png" alt="Photo Gallery 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_te_390x844.png" target="_blank">
+                  <img src="./screenshots/gallery_te_390x844.png" alt="Photo Gallery 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/gallery_te_768x1024.png" alt="Photo Gallery 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/gallery_te_1280x720.png" alt="Photo Gallery 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/gallery_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/gallery_te_1920x1080.png" alt="Photo Gallery 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Contact & Location (<code>/contact</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_en_390x844.png" target="_blank">
+                  <img src="./screenshots/contact_en_390x844.png" alt="Contact & Location 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/contact_en_768x1024.png" alt="Contact & Location 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/contact_en_1280x720.png" alt="Contact & Location 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/contact_en_1920x1080.png" alt="Contact & Location 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_te_390x844.png" target="_blank">
+                  <img src="./screenshots/contact_te_390x844.png" alt="Contact & Location 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/contact_te_768x1024.png" alt="Contact & Location 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/contact_te_1280x720.png" alt="Contact & Location 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/contact_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/contact_te_1920x1080.png" alt="Contact & Location 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Terms of Service (<code>/terms</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_en_390x844.png" target="_blank">
+                  <img src="./screenshots/terms_en_390x844.png" alt="Terms of Service 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/terms_en_768x1024.png" alt="Terms of Service 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/terms_en_1280x720.png" alt="Terms of Service 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/terms_en_1920x1080.png" alt="Terms of Service 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_te_390x844.png" target="_blank">
+                  <img src="./screenshots/terms_te_390x844.png" alt="Terms of Service 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/terms_te_768x1024.png" alt="Terms of Service 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/terms_te_1280x720.png" alt="Terms of Service 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/terms_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/terms_te_1920x1080.png" alt="Terms of Service 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Privacy Policy (<code>/privacy</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_en_390x844.png" target="_blank">
+                  <img src="./screenshots/privacy_en_390x844.png" alt="Privacy Policy 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/privacy_en_768x1024.png" alt="Privacy Policy 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/privacy_en_1280x720.png" alt="Privacy Policy 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/privacy_en_1920x1080.png" alt="Privacy Policy 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_te_390x844.png" target="_blank">
+                  <img src="./screenshots/privacy_te_390x844.png" alt="Privacy Policy 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/privacy_te_768x1024.png" alt="Privacy Policy 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/privacy_te_1280x720.png" alt="Privacy Policy 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/privacy_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/privacy_te_1920x1080.png" alt="Privacy Policy 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="page-section">
+        <h2 class="page-title">Cancellation & Refund (<code>/refund-policy</code>)</h2>
+        <div class="grid">
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_en_390x844.png" target="_blank">
+                  <img src="./screenshots/refund-policy_en_390x844.png" alt="Cancellation & Refund 390x844 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_en_768x1024.png" target="_blank">
+                  <img src="./screenshots/refund-policy_en_768x1024.png" alt="Cancellation & Refund 768x1024 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_en_1280x720.png" target="_blank">
+                  <img src="./screenshots/refund-policy_en_1280x720.png" alt="Cancellation & Refund 1280x720 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>EN</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_en_1920x1080.png" target="_blank">
+                  <img src="./screenshots/refund-policy_en_1920x1080.png" alt="Cancellation & Refund 1920x1080 en" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>390x844</strong> (mobile-390)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_te_390x844.png" target="_blank">
+                  <img src="./screenshots/refund-policy_te_390x844.png" alt="Cancellation & Refund 390x844 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>768x1024</strong> (tablet-768)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_te_768x1024.png" target="_blank">
+                  <img src="./screenshots/refund-policy_te_768x1024.png" alt="Cancellation & Refund 768x1024 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1280x720</strong> (desktop-1280)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_te_1280x720.png" target="_blank">
+                  <img src="./screenshots/refund-policy_te_1280x720.png" alt="Cancellation & Refund 1280x720 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-meta">
+                <span><strong>1920x1080</strong> (desktop-1920)</span>
+                <span>Language: <strong>TE</strong></span>
+              </div>
+              <div class="thumb-wrap">
+                <a href="./screenshots/refund-policy_te_1920x1080.png" target="_blank">
+                  <img src="./screenshots/refund-policy_te_1920x1080.png" alt="Cancellation & Refund 1920x1080 te" loading="lazy" />
+                </a>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+failures 482
+complex Counter({True: 283, False: 199})
+solid failures 199
+unique solid 43
+1.17 #ebdcff on #f9f0ff border /this-route-does-not-exist [border] flex justify-between text-secondary font-semibold pt-2 border-t border-surface-container-highest
+1.17 #ebdcff on #f9f0ff border /this-route-does-not-exist [border] pt-4 border-t border-surface-container-highest
+1.26 #a8a59b on #a9912e control /packages [Book Diamond Package] w-full py-4 rounded-full font-label-md text-label-md text-center block transition-all shadow-md acti
+1.28 #908d7f on #b89f3b control / [Book Diamond Package (₹2,500/hr)] w-full py-3.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary hover:text-on-
+1.30 #ebdcff on #ffffff border /booking [border] rounded-lg bg-surface-container-lowest p-space-lg shadow-xl border border-surface-container-highest
+1.30 #ebdcff on #ffffff border /contact [border] p-space-lg rounded-2xl bg-surface-container-lowest shadow-xl border border-surface-container-highest
+1.53 #cbc4d3 on #f9f0ff border /booking [border] p-6 rounded-2xl cursor-pointer border-2 transition-all flex flex-col justify-between border-outline-
+1.53 #cbc4d3 on #f9f0ff border /refund-policy [border] p-6 rounded-2xl bg-surface-container-low border border-outline-variant/30
+1.53 #cbc4d3 on #f9f0ff text /mobile-booking [chevron_right] material-symbols-outlined text-outline-variant text-[16px]
+1.56 #878375 on #bea53f control /packages [Book Diamond Package] w-full py-4 rounded-full font-label-md text-label-md text-center block transition-all shadow-md acti
+1.70 #cbc4d3 on #ffffff border /this-route-does-not-exist [border] w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-xl
+1.70 #cbc4d3 on #ffffff border /booking [border] w-full p-3 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface focu
+1.70 #cbc4d3 on #ffffff border /booking [border] flex justify-between items-center pt-4 border-t border-outline-variant/30
+1.70 #cbc4d3 on #ffffff border /contact [border] w-full p-3 rounded-lg border border-outline-variant bg-surface-container-lowest
+1.70 #cbc4d3 on #ffffff border /admin/login [border] w-full max-w-md bg-surface-container-lowest rounded-2xl shadow-[0_4px_24px_rgba(36,22,61,0.08)] bord
+1.85 #bab3c1 on #f9f0ff text /mobile-booking [₹500 Hold] font-label-sm text-[10px] leading-3 text-outline mt-0.5
+1.86 #bcbab1 on #9c8524 control /this-route-does-not-exist [Book Diamond Package (₹2,500/hr)] w-full py-3.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary hover:text-on-
+1.88 #bcb6c1 on #fef7ff text /mobile-booking [Sun] font-label-sm text-label-sm text-outline
+1.88 #bcb6c1 on #fef7ff text /mobile-booking [26] font-headline-md text-lg font-bold text-outline leading-none
+1.97 #d266a4 on #b40068 text /booking [Next: Celebrant Details] 
+1.97 #d266a4 on #b40068 text /booking [arrow_forward] material-symbols-outlined text-lg
+2.04 #f59e0b on #fef7ff border /refund-policy [border] p-4 mb-6 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs flex items-sta
+2.08 #aba4b5 on #f5eaff text /mobile-booking [08:30 PM – 10:30 PM] font-title-lg text-title-lg text-outline font-bold
+2.08 #aba4b5 on #f5eaff text /mobile-booking [Private Anniversary Screening (Pre-Booked)] font-body-sm text-body-sm text-outline
+2.10 #b40068 on #351078 text /packages [check_circle] material-symbols-outlined text-secondary text-base
+2.13 #ada6b5 on #f9f0ff text /mobile-booking [Aaradhya] font-label-sm text-[10px] leading-3 text-outline mt-0.5
+2.27 #a79bbb on #705995 control /packages [Book Basic Package] w-full py-4 rounded-full font-label-md text-label-md text-center block transition-all shadow-md acti
+2.41 #9ca3af on #fef7ff placeholder /booking-status [e.g. JBX-VDL-8429-CONF] w-full px-4 py-3 rounded-full border border-outline-variant bg-surface text-on-surface font-mono tex
+2.50 #dc898d on #fef7ff text /mobile-booking [Sold Out] font-label-sm text-[10px] text-error font-bold tracking-tight
+2.54 #9ca3af on #ffffff placeholder /contact [e.g. Ramesh] w-full p-3 rounded-lg border border-outline-variant bg-surface-container-lowest
+2.54 #9ca3af on #ffffff placeholder /contact [e.g. 9876543210] w-full p-3 rounded-lg border border-outline-variant bg-surface-container-lowest
+2.54 #9ca3af on #ffffff placeholder /contact [e.g. Surprise 25th anniversary celebration with custom neon ] w-full p-3 rounded-lg border border-outline-variant bg-surface-container-lowest
+2.54 #a29ca8 on #fef7ff text /mobile-booking [02:30 PM – 03:00 PM] font-title-lg text-title-lg text-outline font-bold
+2.54 #a29ca8 on #fef7ff text /mobile-booking [Sanitization, UV & Room Freshening Buffer] font-body-sm text-body-sm text-outline
+2.54 #68538a on #ab99c6 control /this-route-does-not-exist [Select Basic (₹999/hr)] w-full py-3.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-pri
+2.93 #d26d76 on #f5eaff text /mobile-booking [Booked] font-label-sm text-label-sm text-error font-bold
+3.07 #d6d5d0 on #8b7516 control /this-route-does-not-exist [Book Diamond Package (₹2,500/hr)] w-full py-3.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary hover:text-on-
+3.25 #8e829d on #f9f0ff text /mobile-booking [Advance] font-label-sm text-label-sm text-on-surface font-bold
+3.65 #7a7583 on #f0e3ff text /mobile-booking [Host Lock] font-label-sm text-label-sm text-outline font-semibold px-2 py-1 rounded bg-surface-container-high
+3.84 #bbb1ca on #5e4586 control / [Select Basic (₹999/hr)] w-full py-3.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-pri
+3.85 #7a7583 on #f5eaff placeholder /admin/login [e.g. kiran] w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container border border-outline-variant/60 text-on-su
+3.85 #7a7583 on #f5eaff placeholder /admin/login [••••••••••••] w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container border border-outline-variant/60 text-on-su
+4.40 #786c89 on #f9f0ff text /mobile-booking [Details] font-label-sm text-label-sm text-on-surface font-bold
