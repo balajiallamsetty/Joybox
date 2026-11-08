@@ -3,7 +3,8 @@
  * Joybox Party Room
  */
 
-const API_BASE = import.meta?.env?.VITE_API_BASE_URL || 'http://127.0.0.1:5000/api';
+import { getApiBaseUrl } from './apiBase';
+
 const RAZORPAY_KEY_ID = import.meta?.env?.VITE_RAZORPAY_KEY_ID || '';
 
 /**
@@ -42,7 +43,7 @@ export async function createRazorpayOrder({ bookingReference, token, amount, cur
   const payload = bookingReference && token
     ? { bookingReference, token }
     : { bookingReference: receipt, token, amount, currency, notes };
-  const res = await fetch(`${API_BASE}/payments/create-order`, {
+  const res = await fetch(`${getApiBaseUrl()}/payments/create-order`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -77,7 +78,7 @@ export async function createRazorpayOrder({ bookingReference, token, amount, cur
  * @param {string} [params.token] Optional booking token
  */
 export async function verifyRazorpayPayment({ orderId, paymentId, signature, bookingReference, token }) {
-  const res = await fetch(`${API_BASE}/payments/verify`, {
+  const res = await fetch(`${getApiBaseUrl()}/payments/verify`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

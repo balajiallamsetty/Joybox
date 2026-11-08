@@ -11,12 +11,14 @@ export default function PackagesPage() {
   const [addons, setAddons] = useState([]);
   const [activeOffer, setActiveOffer] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSlowLoading, setIsSlowLoading] = useState(false);
   const [error, setError] = useState(null);
   const [selectedPackageForModal, setSelectedPackageForModal] = useState(null);
 
   const fetchCatalog = () => {
     setLoading(true);
     setError(null);
+    setIsSlowLoading(false);
     Promise.all([
       api.getPackages(),
       api.getAddOns().catch(() => ({ items: [] })),
@@ -31,7 +33,7 @@ export default function PackagesPage() {
         setLoading(false);
       })
       .catch((err) => {
-        setError(err.message || 'Failed to load celebration packages. Please check your network connection.');
+        setError(err.message || "We couldn't load packages right now.");
         setLoading(false);
       });
   };
@@ -39,6 +41,17 @@ export default function PackagesPage() {
   useEffect(() => {
     fetchCatalog();
   }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      setIsSlowLoading(false);
+      return undefined;
+    }
+    const timer = setTimeout(() => {
+      setIsSlowLoading(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [loading]);
 
   return (
     <div className="w-full min-h-screen bg-background">
@@ -75,20 +88,26 @@ export default function PackagesPage() {
                 <div className="flex flex-col items-center justify-center py-16 gap-4">
                   <div className="inline-block animate-spin rounded-full h-10 w-10 border-4 border-secondary border-t-transparent"></div>
                   <p className="font-label-md text-label-md text-on-surface-variant animate-pulse">Loading party packages &amp; rates...</p>
+                  {isSlowLoading && (
+                    <p className="font-body-sm text-body-sm text-secondary max-w-md text-center animate-fadeIn">
+                      Waking up the server, this can take up to a minute on first load.
+                    </p>
+                  )}
                 </div>
               ) : error ? (
                 <div className="max-w-xl mx-auto p-6 rounded-2xl bg-error-container text-on-error-container shadow-md text-center flex flex-col items-center gap-4">
                   <span className="material-symbols-outlined text-4xl text-error">error</span>
                   <div>
-                    <h3 className="font-title-lg text-title-lg font-bold mb-1">Could Not Load Packages</h3>
+                    <h3 className="font-title-lg text-title-lg font-bold mb-1">We couldn't load packages right now.</h3>
                     <p className="font-body-sm text-body-sm opacity-90">{error}</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <button
+                      type="button"
                       onClick={fetchCatalog}
-                      className="px-6 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md hover:bg-secondary-container transition-all shadow"
+                      className="px-6 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md hover:bg-secondary-container transition-all shadow active:scale-95"
                     >
-                      Retry Loading
+                      Retry
                     </button>
                     <a
                       href="https://wa.me/917842704429?text=Hi%20Joybox!%20I%20want%20to%20enquire%20about%20party%20packages%20in%20Vadlamudi."

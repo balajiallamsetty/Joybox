@@ -1,4 +1,4 @@
-const API_BASE = import.meta?.env?.VITE_API_BASE_URL || 'http://127.0.0.1:5000/api';
+import { getApiBaseUrl } from './apiBase';
 
 const TOKEN_KEY = 'joybox_admin_token';
 let inMemoryToken = null;
@@ -35,7 +35,8 @@ export function getAdminSessionToken() {
 }
 
 async function adminRequest(endpoint, options = {}) {
-  const url = `${API_BASE}/admin${endpoint}`;
+  const base = getApiBaseUrl();
+  const url = `${base}/admin${endpoint}`;
   const token = getAdminSessionToken();
   const headers = {
     'Content-Type': 'application/json',

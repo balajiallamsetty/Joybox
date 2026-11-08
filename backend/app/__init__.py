@@ -124,17 +124,21 @@ def create_app(test_config=None):
         if request.is_secure:
             response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
 
-        if request.path.startswith("/api/admin"):
+        if request.path.startswith("/api/admin") or "Authorization" in request.headers:
             response.headers["Referrer-Policy"] = "no-referrer"
             response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
             response.headers["Pragma"] = "no-cache"
+        elif request.path.startswith("/api/packages") or request.path.startswith("/api/add-ons") or request.path.startswith("/api/offers/active"):
+            response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+            response.headers["Cache-Control"] = "public, max-age=30, must-revalidate"
         else:
             response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
 
         return response
 
     # CORS configuration with credentials support for HttpOnly admin cookies
-    origins = [orig.strip() for orig in app.config["FRONTEND_ORIGIN"].split(",") if orig.strip()]
+    # Normalizes comma-separated origins, trimming whitespace and trailing slashes
+    origins = [orig.strip().rstrip("/") for orig in str(app.config.get("FRONTEND_ORIGIN", "")).split(",") if orig.strip()]
     CORS(app, resources={r"/api/*": {"origins": origins}}, supports_credentials=True)
 
     # Database initialization

@@ -4,9 +4,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BookingsClosedNotice from '../components/BookingsClosedNotice';
 import { api } from '../services/api';
+import { getApiBaseUrl } from '../services/apiBase';
 import { getMaxBookingDate } from '../utils/dateTime.js';
-
-const API_BASE = import.meta?.env?.VITE_API_BASE_URL || 'http://127.0.0.1:5000/api';
 
 const PACKAGE_COPY = {
   basic: {
@@ -355,7 +354,7 @@ export default function BookingWizardPage() {
         addOnCodes: selectedAddOns,
       };
 
-      const bookingRes = await fetch(`${API_BASE}/bookings`, {
+      const bookingRes = await fetch(`${getApiBaseUrl()}/bookings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookingPayload),
@@ -379,7 +378,7 @@ export default function BookingWizardPage() {
       }
 
       // 2. Create Razorpay Payment Order
-      const orderRes = await fetch(`${API_BASE}/payments/create-order`, {
+      const orderRes = await fetch(`${getApiBaseUrl()}/payments/create-order`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -421,7 +420,7 @@ export default function BookingWizardPage() {
         order_id: orderId,
         handler: async function (response) {
           try {
-            const verifyRes = await fetch(`${API_BASE}/payments/verify`, {
+            const verifyRes = await fetch(`${getApiBaseUrl()}/payments/verify`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({

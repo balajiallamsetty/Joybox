@@ -12,6 +12,8 @@ export default function LandingPage() {
   const [addons, setAddons] = useState([]);
   const [activeOffer, setActiveOffer] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSlowLoading, setIsSlowLoading] = useState(false);
+  const [catalogError, setCatalogError] = useState(null);
   const [calcTier, setCalcTier] = useState('basic');
   const [calcHours, setCalcHours] = useState(2);
   const [selectedAddons, setSelectedAddons] = useState([]);
@@ -20,20 +22,44 @@ export default function LandingPage() {
   const [selectedPackageForModal, setSelectedPackageForModal] = useState(null);
 
   // Fetch real catalog data on mount
-  useEffect(() => {
+  const fetchCatalog = () => {
+    setLoading(true);
+    setCatalogError(null);
+    setIsSlowLoading(false);
+
     Promise.all([
-      api.getPackages().catch(() => ({ items: [] })),
+      api.getPackages(),
       api.getAddOns().catch(() => ({ items: [] })),
       api.getActiveOffers().catch(() => ({ offers: [] }))
-    ]).then(([pkgData, addonData, offerData]) => {
-      setPackages(pkgData.items || []);
-      setAddons(addonData.items || []);
-      if (offerData.offers && offerData.offers.length > 0) {
-        setActiveOffer(offerData.offers[0]);
-      }
-      setLoading(false);
-    });
+    ])
+      .then(([pkgData, addonData, offerData]) => {
+        setPackages(pkgData?.items || []);
+        setAddons(addonData?.items || []);
+        if (offerData?.offers && offerData.offers.length > 0) {
+          setActiveOffer(offerData.offers[0]);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        setCatalogError(err.message || "We couldn't load packages right now.");
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    fetchCatalog();
   }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      setIsSlowLoading(false);
+      return undefined;
+    }
+    const timer = setTimeout(() => {
+      setIsSlowLoading(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [loading]);
 
   // Update live quote whenever estimator params change
   useEffect(() => {
@@ -222,7 +248,43 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              {!loading && packages.length === 0 ? (
+              {loading ? (
+                <div className="rounded-2xl border border-outline/30 bg-surface-container-low p-12 text-center flex flex-col items-center justify-center gap-4">
+                  <div className="inline-block animate-spin rounded-full h-10 w-10 border-4 border-secondary border-t-transparent"></div>
+                  <p className="font-label-md text-label-md text-on-surface-variant animate-pulse">Loading celebration packages &amp; rates...</p>
+                  {isSlowLoading && (
+                    <p className="font-body-sm text-body-sm text-secondary max-w-md animate-fadeIn">
+                      Waking up the server, this can take up to a minute on first load.
+                    </p>
+                  )}
+                </div>
+              ) : catalogError ? (
+                <div className="rounded-2xl border border-error/20 bg-error-container text-on-error-container p-8 text-center flex flex-col items-center justify-center gap-4 shadow-md max-w-xl mx-auto">
+                  <span className="material-symbols-outlined text-4xl text-error">error</span>
+                  <div>
+                    <h3 className="font-headline-md text-headline-md font-bold mb-1">We couldn't load packages right now.</h3>
+                    <p className="font-body-sm text-body-sm opacity-90">{catalogError}</p>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
+                    <button
+                      type="button"
+                      onClick={fetchCatalog}
+                      className="px-6 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md hover:bg-secondary-container transition-all shadow active:scale-95"
+                    >
+                      Retry
+                    </button>
+                    <a
+                      href={`https://wa.me/${waNumber}?text=${encodeURIComponent('Hi Joybox! I had trouble loading party packages on the website and would like details.')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 rounded-full bg-[#075E54] text-on-primary font-label-md shadow hover:brightness-110 flex items-center gap-1.5"
+                    >
+                      <span className="material-symbols-outlined text-base">chat</span>
+                      <span>Contact on WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              ) : packages.length === 0 ? (
                 <div className="rounded-lg border border-outline bg-surface-container-low p-8 text-center">
                   <h3 className="font-headline-md text-headline-md text-primary">Bookings open soon</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant mt-2">

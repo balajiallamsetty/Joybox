@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { VENUE_CONFIG } from '../services/config';
 import { openRazorpayCheckout } from '../services/razorpay';
+import { getApiBaseUrl } from '../services/apiBase';
 
 const isDev = Boolean(import.meta?.env?.DEV);
 
@@ -35,7 +36,7 @@ export default function BookingStatusPage() {
     const reason = window.prompt('Please enter the cancellation reason (optional):') || 'Customer cancellation';
     setCancelling(true);
     try {
-      const res = await fetch(`${import.meta?.env?.VITE_API_BASE_URL || 'http://127.0.0.1:5000/api'}/bookings/${bookingRef}/cancel`, {
+      const res = await fetch(`${getApiBaseUrl()}/bookings/${bookingRef}/cancel`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: resolvedToken, reason }),
@@ -122,7 +123,7 @@ export default function BookingStatusPage() {
     }
 
     const tokenQuery = token ? `?token=${encodeURIComponent(token)}` : '';
-    fetch(`${import.meta?.env?.VITE_API_BASE_URL || 'http://127.0.0.1:5000/api'}/bookings/${bookingRef}${tokenQuery}`)
+    fetch(`${getApiBaseUrl()}/bookings/${bookingRef}${tokenQuery}`)
       .then(async (res) => {
         const json = await res.json();
         if (!res.ok) throw new Error(json?.error?.message || 'Booking not found');

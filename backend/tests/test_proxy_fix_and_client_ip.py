@@ -278,3 +278,42 @@ def test_api_security_headers_include_csp_permissions_and_hsts():
 
     plain = client.get("/api/health")
     assert "Strict-Transport-Security" not in plain.headers
+
+
+def test_multi_origin_with_trailing_slashes_and_cors_headers():
+    """
+    Verifies that comma-separated FRONTEND_ORIGIN with trailing slashes and whitespace
+    is properly sanitized, matches browser origins without trailing slashes,
+    and returns correct Access-Control-Allow-Origin headers.
+    """
+    app = create_app({
+        "TESTING": True,
+        "FRONTEND_ORIGIN": "https://joybox-rosy.vercel.app/ , http://localhost:5173/ ",
+    })
+    client = app.test_client()
+
+    # Request with Vercel origin (no trailing slash from browser)
+    res_vercel = client.get(
+        "/api/packages",
+        headers={"Origin": "https://joybox-rosy.vercel.app"}
+    )
+    assert res_vercel.status_code == 200
+    assert res_vercel.headers.get("Access-Control-Allow-Origin") == "https://joybox-rosy.vercel.app"
+    assert res_vercel.headers.get("Access-Control-Allow-Credentials") == "true"
+    assert "public, max-age=30" in res_vercel.headers.get("Cache-Control", "")
+
+    # Request with Localhost origin
+    res_local = client.get(
+        "/api/packages",
+        headers={"Origin": "http://localhost:5173"}
+    )
+    assert res_local.status_code == 200
+    assert res_local.headers.get("Access-Control-Allow-Origin") == "http://localhost:5173"
+
+    # Request with untrusted origin
+    res_untrusted = client.get(
+        "/api/packages",
+        headers={"Origin": "https://malicious-site.example"}
+    )
+    assert res_untrusted.headers.get("Access-Control-Allow-Origin") is None
+
