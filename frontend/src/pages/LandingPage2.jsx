@@ -144,9 +144,6 @@ export default function LandingPage2() {
                   <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">
                     MAMA EDI MANA ADDA • VADLAMUDI, GUNTUR
                   </span>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-bold">
-                    తెలుగు సేవలు
-                  </span>
                 </div>
                 {activeOffer && (
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-xs font-bold mb-space-sm w-fit shadow">

@@ -125,7 +125,6 @@ export default function LandingPage() {
                   <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md shadow-md text-tertiary-fixed mb-space-sm w-fit">
                     <span className="material-symbols-outlined text-base animate-bounce" style={{ fontVariationSettings: "'FILL' 1" }}>celebration</span>
                     <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">MAMA EDI MANA ADDA • VADLAMUDI, GUNTUR</span>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-bold">తెలుగు సేవలు</span>
                   </div>
                   <h1 className="font-display-hero text-display-hero max-w-3xl tracking-tight leading-tight mb-space-sm">
                     Small Moments... <br />
